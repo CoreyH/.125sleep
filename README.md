@@ -11,7 +11,8 @@ Building a **"1/8th Sleep"** system means creating a cooled bed at a fraction of
 | Option | Cost | Effort | Reliability | Best For |
 |--------|------|--------|-------------|----------|
 | **Buy: ChiliPad Cube** | ~$650 | Plug & play | High | Want it to "just work" |
-| **DIY: 1/8th Sleep Build** | ~$315-415 | Medium | Medium-High | Budget-conscious, tinkerers |
+| **DIY: 1/8th Sleep (Single)** | ~$315-415 | Medium | Medium-High | Budget-conscious, tinkerers |
+| **DIY: 1/8th Sleep (Dual Pad)** | ~$455-570 | Medium | Medium-High | Couples, shared temp control |
 
 ---
 
@@ -185,9 +186,89 @@ A small cooler box holds the water and keeps it cold, reducing chiller workload.
 
 ---
 
+## Dual Pad Configuration (Two Mattresses)
+
+For Danish-style separated mattresses pushed together, a single chiller can cool both pads if you don't need independent temperature control.
+
+### Will One Chiller Handle Two Pads?
+
+**Yes, with caveats:**
+
+| Chiller Size | Two Pads? | Notes |
+|--------------|-----------|-------|
+| 1/10 HP | Works | Good for moderate cooling (18-20°C target) |
+| 1/4 HP | Better | Recommended if you want aggressive cooling (15°C) or room gets hot |
+| 1/3 HP | Overkill | Unless you live somewhere very warm |
+
+The 1/10 HP is rated for 160L tank capacity. Your dual-pad system uses only 4-8L of water, so volume isn't the constraint—cooling power is. Two bodies generate roughly 2x heat, so the chiller runs longer.
+
+### Configuration Options
+
+**Option A: Series (Recommended for Simplicity)**
+
+```
+┌─────────────┐     ┌─────────────┐
+│    PAD 1    │────►│    PAD 2    │
+└─────────────┘     └──────┬──────┘
+       ▲                   │
+       │                   ▼
+       │            ┌─────────────┐
+       │            │   CHILLER   │
+       │            └──────┬──────┘
+       │                   │
+       │                   ▼
+       │            ┌─────────────┐
+       └────────────│  RESERVOIR  │
+                    │   + PUMP    │
+                    └─────────────┘
+```
+
+Water flow: **Reservoir → Pump → Pad 1 → Pad 2 → Chiller → Reservoir**
+
+- **Pros:** Simple plumbing, no splitters, easy to set up
+- **Cons:** Pad 2 receives slightly warmer water (~1-2°C difference, barely noticeable)
+
+**Option B: Parallel (More Even Cooling)**
+
+```
+                    ┌─────────────┐
+               ┌───►│    PAD 1    │───┐
+               │    └─────────────┘   │
+┌──────────┐   │                      │    ┌─────────────┐
+│   PUMP   │───┤                      ├───►│   CHILLER   │
+└──────────┘   │                      │    └─────────────┘
+               │    ┌─────────────┐   │
+               └───►│    PAD 2    │───┘
+                    └─────────────┘
+```
+
+Water flow: **Reservoir → Pump → Y-split → Both Pads → Y-merge → Chiller → Reservoir**
+
+- **Pros:** Both pads receive identical temperature water
+- **Cons:** Requires Y-splitters (~$5 each), flow rate halved to each pad, more complex plumbing
+
+### Recommendation
+
+**Start with Series configuration.** The 1-2°C difference between pads is imperceptible in practice. If your wife runs hotter/colder than you, put her pad first in the series (cooler water).
+
+If the 1/10 HP chiller struggles on hot summer nights, you can either:
+1. Upgrade to 1/4 HP chiller (~$250-300)
+2. Add a second chiller (one per pad) for independent control later
+
+### Additional Parts for Dual Setup
+
+| Item | Series Config | Parallel Config |
+|------|---------------|-----------------|
+| Extra tubing | +2-3 meters | +3-4 meters |
+| Y-splitters (8mm) | Not needed | 2x (~$5 each) |
+| Extra hose clamps | +4 | +8 |
+| Larger reservoir | Optional (10L vs 5L) | Recommended (10L) |
+
+---
+
 ## DIY Assembly Instructions
 
-### System Diagram
+### Single Pad System Diagram
 
 ```
 ┌─────────────┐
@@ -312,8 +393,10 @@ Add an LED strip along the top frame for ambient lighting. Use warm/red tones at
 | Solution | Initial Cost | Annual Cost | Total (3 Years) |
 |----------|-------------|-------------|-----------------|
 | **Eight Sleep Pod 5** | $3,348 | $200/yr | $3,948 |
-| **ChiliPad Cube** | $650 | $0 | $650 |
-| **DIY 1/8th Sleep** | $315-415 | ~$20 (maintenance) | $375-475 |
+| **ChiliPad Cube (Single)** | $650 | $0 | $650 |
+| **ChiliPad Cube (Dual/Queen)** | $1,249 | $0 | $1,249 |
+| **DIY 1/8th Sleep (Single)** | $315-415 | ~$20 (maintenance) | $375-475 |
+| **DIY 1/8th Sleep (Dual Pad)** | $455-570 | ~$30 (maintenance) | $545-660 |
 
 ---
 
